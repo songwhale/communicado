@@ -1,0 +1,92 @@
+@mixin appearance($str) {
+  -msie-appearance: $str;
+  -o-appearance: $str;
+  -webkit-appearance: $str;
+  -moz-appearance: $str;
+  appearance: $str;
+}
+
+.communicado {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .controls {
+    width: 100%;
+    flex: 0 0 auto;
+
+    .horizontal {
+      display: flex;
+      padding: 0.25em;
+
+      #new-message {
+        height: 4em;
+        resize: none;
+        flex: 1 0 auto;
+        @include appearance('none');
+        border: solid #777 1px;
+        margin: 3px 0.25em 1px 0;
+        font-size: 12px;
+      }
+
+      #send-new-message {
+        height: 4em;
+        right: 0;
+        font-size: 12px;
+        margin: 3px 0 1px;
+        vertical-align: top;
+        flex: 0 0 9em;
+      }
+
+      #end-chat {
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+
+    &.closed {
+      top: 0;
+      bottom: auto;
+      text-align: center;
+      color: #fff;
+      font-size: 2em;
+    }
+  }
+
+  .messages {
+    width: 100%;
+    overflow-y: auto;
+    flex: 1 0 auto;
+    position: relative;
+
+    .cdo-container {
+      height: 0;
+    }
+
+    .item {
+      border: none;
+      background: none;
+      margin: 0.25em 0;
+      display: flex;
+
+      .source {
+        font-weight: bold;
+        vertical-align: top;
+      }
+
+      .text {
+        flex: 1;
+        padding: 0 0.5em;
+      }
+
+      .timestamp {
+        text-align: right;
+        color: #aaa;
+        font-style: italic;
+        padding-right: 0.25em;
+      }
+    }
+  }
+}
