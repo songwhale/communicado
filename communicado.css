@@ -1,0 +1,63 @@
+.communicado {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+  .communicado .controls {
+    width: 100%;
+    flex: 0 0 auto; }
+    .communicado .controls .horizontal {
+      display: flex;
+      padding: 0.25em; }
+      .communicado .controls .horizontal #new-message {
+        height: 4em;
+        resize: none;
+        flex: 1 0 auto;
+        -msie-appearance: "none";
+        -o-appearance: "none";
+        -webkit-appearance: "none";
+        -moz-appearance: "none";
+        appearance: "none";
+        border: solid #777 1px;
+        margin: 3px 0.25em 1px 0;
+        font-size: 12px; }
+      .communicado .controls .horizontal #send-new-message {
+        height: 4em;
+        right: 0;
+        font-size: 12px;
+        margin: 3px 0 1px;
+        vertical-align: top;
+        flex: 0 0 9em; }
+      .communicado .controls .horizontal #end-chat {
+        margin-bottom: 0;
+        width: 100%; }
+    .communicado .controls.closed {
+      top: 0;
+      bottom: auto;
+      text-align: center;
+      color: #fff;
+      font-size: 2em; }
+  .communicado .messages {
+    width: 100%;
+    overflow-y: auto;
+    flex: 1 0 auto;
+    position: relative; }
+    .communicado .messages .cdo-container {
+      height: 0; }
+    .communicado .messages .item {
+      border: none;
+      background: none;
+      margin: 0.25em 0;
+      display: flex; }
+      .communicado .messages .item .source {
+        font-weight: bold;
+        vertical-align: top; }
+      .communicado .messages .item .text {
+        flex: 1;
+        padding: 0 0.5em; }
+      .communicado .messages .item .timestamp {
+        text-align: right;
+        color: #aaa;
+        font-style: italic;
+        padding-right: 0.25em; }

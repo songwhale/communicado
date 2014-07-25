@@ -55,7 +55,7 @@
     scroll_to_bottom: ->
       @$msgs.animate scrollTop: @$msgs.prop('scrollHeight') - @$msgs.height()
 
-    # Fuck
+    # Make sure that the messages div doesn't overflow.
     resize: ->
       $("#chat-messages").css "max-height", $(".cdo-container")[0].scrollHeight + 10
 
